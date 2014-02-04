@@ -36,15 +36,23 @@ $(document).ready(function() {
     }
     if($("#player1_strip .last-box").hasClass("active")) {
       $('#game-end').css('display','inline');
-      var result = timer('stop');
-      console.log("Time was " + result);
-      alert("Player one wins!");
+      var timer_result = timer('stop');
+      console.log("Time was " + timer_result);
+      $.post("/end_game",{player:1, duration:timer_result}, function(results_page) {
+        console.log("This part is firing");
+        console.log(results_page);
+        window.location.href = results_page
+      });
       $("td").removeClass("last-box");
     } else if($("#player2_strip .last-box").hasClass("active")) {
       $('#game-end').css('display','inline');
-      var result = timer('stop');
-      console.log("Time was " + result);
-      alert("Player two wins!");
+      var timer_result = timer('stop');
+      console.log("Time was " + timer_result);
+      $.post("/end_game",{player:2, duration:timer_result}, function(results_page) {
+        console.log("This part is firing");
+        console.log(results_page);
+        window.location.href = results_page
+      });
       $("td").removeClass("last-box");
     }
   });
