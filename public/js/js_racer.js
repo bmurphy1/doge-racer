@@ -37,14 +37,15 @@ $(document).ready(function() {
     if($("#player1_strip .last-box").hasClass("active")) {
       $('#game-end').css('display','inline');
       var result = timer('stop');
+      console.log("Time was " + result);
       alert("Player one wins!");
       $("td").removeClass("last-box");
     } else if($("#player2_strip .last-box").hasClass("active")) {
       $('#game-end').css('display','inline');
       var result = timer('stop');
+      console.log("Time was " + result);
       alert("Player two wins!");
       $("td").removeClass("last-box");
     }
-
   });
 });
