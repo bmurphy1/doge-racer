@@ -11,13 +11,17 @@ post '/new_game' do
   game = Game.create()
   game << player_1
   game << player_2
-
-
+  game.url = game.id
+  game.save
+  session[:game_id] = game.id
+  session[:player_1] = player_1.name
+  session[:player_2] = player_2.name
   redirect '/play'
 end
 
 get '/play' do
 
+  erb :game
 end
 
 post '/end_game' do
