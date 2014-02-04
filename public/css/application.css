@@ -1,3 +1,7 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 .container {
   margin: 20px auto;
   width: 600px;

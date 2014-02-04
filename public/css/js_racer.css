@@ -1,8 +1,37 @@
+#giant-doge {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -256px;
+  z-index: 0;
+}
+
+#countdown {
+  position: relative;
+  /*top: 20px;*/
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -130px;
+  font-size: 30em;
+  z-index: 1;
+}
+
+#go {
+  position: relative;
+  /*top: 20px;*/
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -130px;
+  font-size: 20em;
+  z-index: 1;
+}
+
 .racer_table {
   position: relative;
 }
 
 .racer_table td {
+  position: relative;
   background-color: white;
   height: 50px;
   width: 50px;
