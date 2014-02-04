@@ -31,12 +31,19 @@ $(document).ready(function() {
     if(event.keyCode == 80){update_player_position("player2");}
     // Detect which key was pressed and call the appropriate function
     // Google "jquery keyup what key was pressed" if you don't know how
-    if($(".player1_strip,  #second-box").hasClass("active")) {
+    if($("#player1_strip #second-box").hasClass("active")) {
       $('#game-start').css('display','none');
     }
-    if($(".player1_strip, .last-box").hasClass("active") || $(".player2_strip, .last-box").hasClass("active")) {
+    if($("#player1_strip .last-box").hasClass("active")) {
       $('#game-end').css('display','inline');
       var result = timer('stop');
+      alert("Player one wins!");
+      $("td").removeClass("last-box");
+    } else if($("#player2_strip .last-box").hasClass("active")) {
+      $('#game-end').css('display','inline');
+      var result = timer('stop');
+      alert("Player two wins!");
+      $("td").removeClass("last-box");
     }
 
   });
