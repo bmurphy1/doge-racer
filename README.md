@@ -1,6 +1,13 @@
-##JavaScript Racer 2
+##Doge Racer
 
 Build a back end to our JavaScript racer game using a simple Sinatra app. The game still runs in a single browser instance, i.e., two players don't play each other across different browsers, but rather on a single browser.
+
+HOW TO PLAY:
+Press your key as fast as you can to race your shibe!
+
+player 1 - press q
+player 2 - press p
+
 
 User stories:
 +Two people get on a computer and visit the application
